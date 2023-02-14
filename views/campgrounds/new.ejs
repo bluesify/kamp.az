@@ -1,0 +1,43 @@
+<% layout('layouts/boilerplate') %>
+
+<div class="row">
+    <h1 class="text-center">Yeni düşərgə</h1>
+    <div class="col-6 offset-3">
+        <form action="/campgrounds" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label class="form-label" for="title">Ad:</label>
+                <input class="form-control" type="text" name="campground[title]" id="title" required>
+                <div class="valid-feedback">Uyğundur!</div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="location">Məkan:</label>
+                <input class="form-control" type="text" name="campground[location]" id="location" required>
+                <div class="valid-feedback">Uyğundur!</div>
+            </div>
+            <div class="mb-3">
+                <label for="customFile" class="form-label">Şəkillər:</label>
+                <input class="form-control" type="file" id="customFile" name="image" multiple>
+              </div>
+              <div class="valid-feedback">Uyğundur!</div>
+              <!-- <input class="form-control" type="text" name="campground[image]" id="image" required> -->
+            <div class="mb3">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="price-label">₼</span>
+                    <input type="text" class="form-control" placeholder="0.00" aria-label="Price" aria-describedby="price-label" name="campground[price]" required>
+                    <div class="valid-feedback">Uyğundur!</div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="description">Təsvir:</label>
+                <textarea class="form-control" type="text" name="campground[description]" id="description" required></textarea>
+                <div class="valid-feedback">Uyğundur!</div>
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-success">Əlavə et</button>
+            </div>
+        </form>
+        <a href="/campgrounds">Bütün düşərgələr</a>
+    </div>
+</div>
+
+
